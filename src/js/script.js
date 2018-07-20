@@ -5,11 +5,9 @@ $(document).ready(function () {
     });
 });
 
-
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
     scrollFunction();
-};
+}
 
 function scrollFunction() {
     var showButtonHeight = 160;
@@ -18,4 +16,27 @@ function scrollFunction() {
     } else {
         $('#toTop').removeClass('show');
     }
+}
+
+function textAnimation(element, text) {
+    var el = $(element);
+    var textElements = text.split("").map(function (c) {
+        return $('<span id="' + c + '">' + c + '</span>');
+    });
+    var delay = 100; // Tune this for different letter delays.
+    textElements.forEach(function (e, i) {
+        el.append(e);
+        e.css('opacity', '0');
+        setTimeout(function () {
+            e.animate({
+                opacity: 1
+            }, 300)
+        }, 100 + i * delay)
+    })
+}
+
+window.onload = function () {
+    setTimeout("textAnimation('.header-text h1', 'wyjątkowy dzień')", 1000);
+    setTimeout("textAnimation('.header-text h2:eq(0)', 'w wyjątkowym')", 2500);
+    setTimeout("textAnimation('.header-text h2:eq(1)', 'miejscu')", 4000);
 }
