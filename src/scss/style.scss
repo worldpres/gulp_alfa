@@ -79,7 +79,7 @@ body {
 		width: 0px;
 		height: 0px;
 		&.show {
-			opacity: 0.75;
+			opacity: 0.6;
 			width: auto;
 			height: auto;
 			font-size: 40px;
@@ -101,6 +101,27 @@ body {
 		nav {
 			height: 160px;
 			background-color: rgba(#fff, 0.75);
+			transition: all 0.25s;
+			&.small {
+				height: 80px;
+				background-color: rgba(#fff, 1);
+				.brand-logo {
+					img {
+						height: 60px;
+						margin-top: calc((80px - 60px)/2);
+					}
+				}
+				.facebook {
+					line-height: 0px;
+					a {
+						display: inline-block;
+						margin: 5px 20px 10px 0px;
+						img {
+							height: 20px;
+						}
+					}
+				}
+			}
 			.brand-logo {
 				height: 100%;
 				img {
@@ -177,6 +198,13 @@ body {
 			height: calc(100vh - 1px);
 			min-height: 768px;
 			position: relative;
+			div {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				min-height: 220px;
+			}
 			h1 {
 				color: #fff;
 				text-transform: uppercase;
@@ -184,10 +212,6 @@ body {
 				font-size: 3.2em;
 				padding: 0px;
 				margin: 0px;
-				position: absolute;
-				top: 40%;
-				left: 50%;
-				transform: translate(-50%, -50%);
 				text-shadow: 2px 2px 8px $czarny;
 			}
 			h2:nth-of-type(1) {
@@ -197,10 +221,6 @@ body {
 				line-height: 1.2em;
 				padding: 0px;
 				margin: 0px;
-				position: absolute;
-				top: 48%;
-				left: 50%;
-				transform: translate(-50%, -50%);
 				text-shadow: 0px 0px 1px #222;
 			}
 			h2:nth-of-type(2) {
@@ -210,10 +230,6 @@ body {
 				line-height: 1.2em;
 				padding: 0px;
 				margin: 0px;
-				position: absolute;
-				top: 58%;
-				left: 50%;
-				transform: translate(-50%, -50%);
 				text-shadow: 0px 0px 1px #222;
 			}
 		}

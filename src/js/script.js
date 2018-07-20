@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('.button-collapse').sideNav();
     $('.scrollspy').scrollSpy({
-        scrollOffset: 160,
+        scrollOffset: 80,
     });
 });
 
@@ -13,8 +13,10 @@ function scrollFunction() {
     var showButtonHeight = 160;
     if (document.body.scrollTop > showButtonHeight || document.documentElement.scrollTop > showButtonHeight) {
         $('#toTop').addClass('show');
+        $('nav').addClass('small');
     } else {
         $('#toTop').removeClass('show');
+        $('nav').removeClass('small');
     }
 }
 
@@ -36,7 +38,7 @@ function textAnimation(element, text) {
 }
 
 window.onload = function () {
-    setTimeout("textAnimation('.header-text h1', 'wyjątkowy dzień')", 1000);
-    setTimeout("textAnimation('.header-text h2:eq(0)', 'w wyjątkowym')", 2500);
-    setTimeout("textAnimation('.header-text h2:eq(1)', 'miejscu')", 4000);
+    setTimeout("textAnimation('.header-text h1', 'wyjątkowy dzień')", 500);
+    setTimeout("textAnimation('.header-text h2:eq(0)', 'w wyjątkowym')", 2000);
+    setTimeout("textAnimation('.header-text h2:eq(1)', 'miejscu')", 3500);
 }
