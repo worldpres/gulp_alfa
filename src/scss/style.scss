@@ -1,16 +1,3 @@
-/* Used as an example only to position the footer at the end of the page.
-You can delete these styles or move it to your custom css file */
-
-body {
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-}
-
-main {
-	flex: 1 0 auto;
-}
-
 /* Normalize.css fix */
 
 * {
@@ -19,3 +6,26 @@ main {
 }
 
 /* My styles */
+
+body {
+	overflow-x: hidden;
+	header {
+		width: 100%;
+		height: 100vh;
+		background-image: url('../img/bg.jpg');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+		nav {
+			height: 160px;
+			background-color: rgba(#fff, 0.6);
+			.brand-logo{
+				height: 100%;
+				img{
+					height: 120px;
+					margin-top: calc((160px - 120px)/2);
+				}
+			}
+		}
+	}
+}
