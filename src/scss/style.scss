@@ -1,0 +1,21 @@
+/* Used as an example only to position the footer at the end of the page.
+You can delete these styles or move it to your custom css file */
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+/* Normalize.css fix */
+
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+
+/* My styles */
