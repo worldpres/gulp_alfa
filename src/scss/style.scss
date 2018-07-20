@@ -1,3 +1,19 @@
+/* tmp */
+
+$s-min: 20;
+$s-max: 70;
+$l-min: 30;
+$l-max: 90;
+@for $i from 1 through 5 {
+	section:nth-child(#{$i}) {
+		background-color: hsl(random(360), $s-min+random($s-max+-$s-min), $l-min+random($l-max+-$l-min));
+	}
+}
+
+section {
+	height: 50vh;
+}
+
 /* Normalize.css fix */
 
 * {
@@ -15,6 +31,22 @@ ozdobny - scriptina pro
 teksty - roboto
 logo ALFA - TR Arabia
 */
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #fefefe;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $zloty;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: $czarny;
+}
 
 body {
 	overflow-x: hidden;
@@ -77,6 +109,12 @@ body {
 							left: 50%;
 							bottom: 0px;
 							transition: all 0.25s;
+						}
+						&.active {
+							&:before {
+								left: 0%;
+								width: 100%;
+							}
 						}
 					}
 					&:hover {
