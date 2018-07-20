@@ -7,6 +7,15 @@
 
 /* My styles */
 
+$zloty: #dbc56e;
+$czarny: #404040;
+/*
+fonty:
+ozdobny - scriptina pro
+teksty - roboto
+logo ALFA - TR Arabia
+*/
+
 body {
 	overflow-x: hidden;
 	header {
@@ -18,12 +27,66 @@ body {
 		background-size: cover;
 		nav {
 			height: 160px;
-			background-color: rgba(#fff, 0.6);
-			.brand-logo{
+			background-color: rgba(#fff, 0.75);
+			.brand-logo {
 				height: 100%;
-				img{
+				img {
 					height: 120px;
 					margin-top: calc((160px - 120px)/2);
+					transition: all 0.25s;
+				}
+				&:hover {
+					img {
+						filter: contrast(120%);
+					}
+				}
+			}
+			.facebook {
+				line-height: 10px;
+				a {
+					display: inline-block;
+					margin: 20px;
+					img {
+						height: 50px;
+						transition: all 0.25s;
+					}
+					&:hover {
+						img {
+							filter: contrast(120%);
+						}
+					}
+				}
+			}
+			ul {
+				li {
+					padding: 0px 10px;
+					a {
+						color: $czarny;
+						text-transform: uppercase;
+						position: relative;
+						font-size: 18px;
+						line-height: 16px;
+						padding: 8px;
+						&:before {
+							content: "";
+							display: block;
+							width: 0%;
+							height: 1px;
+							background-color: $czarny;
+							position: absolute;
+							left: 50%;
+							bottom: 0px;
+							transition: all 0.25s;
+						}
+					}
+					&:hover {
+						a {
+							&:before {
+								left: 0%;
+								width: 100%;
+							}
+						}
+					}
 				}
 			}
 		}
