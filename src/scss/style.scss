@@ -11,7 +11,7 @@ $l-max: 90;
 }
 
 section {
-	height: 50vh;
+	min-height: 30vh;
 }
 
 /* Normalize.css fix */
@@ -25,13 +25,6 @@ section {
 
 $zloty: #dbc56e;
 $czarny: #404040;
-/*
-fonty:
-ozdobny - scriptina pro
-teksty - roboto
-logo ALFA - TR Arabia
-*/
-
 ::-webkit-scrollbar {
 	width: 10px;
 }
@@ -294,6 +287,70 @@ body {
 				padding: 0px;
 				margin: 0px;
 				text-shadow: 0px 0px 1px #222;
+			}
+		}
+	}
+	main {
+		#onas {
+			padding: 50px 0px;
+			background: #fff;
+			h1 {
+				text-align: center;
+				font-family: 'Scriptina';
+				font-size: 3em;
+			}
+			.icons {
+				text-align: center;
+				.icon {
+					margin: 20px 0px;
+					div:nth-child(1) {
+						img {
+							height: 100px;
+						}
+					}
+					div:nth-child(2) {
+						font-size: 1.1em;
+						margin: 10px 0px;
+						text-transform: uppercase;
+						font-weight: 500;
+					}
+					div:nth-child(3) {
+						color: $czarny;
+						font-size: 0.9em;
+						font-weight: 300;
+					}
+				}
+			}
+		}
+		#oferta {
+			.blackbox {
+				background: rgba(#000, 0.75);
+				padding: 20px 40px;
+			}
+			h1 {
+				text-align: center;
+				font-family: 'Scriptina';
+				font-size: 3em;
+				text-shadow: 0px 0px 1px #fff;
+			}
+			ul {
+				li{
+					list-style-type: circle;
+					list-style-position: inside;
+				}
+			}
+			.row {
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				background-size: cover;
+				color: #fff;
+				margin: 0px;
+				&:nth-child(1) {
+					background-image: url('../img/bg-oferta1.jpg');
+				}
+				&:nth-child(2) {
+					background-image: url('../img/bg-oferta2.jpg');
+				}
 			}
 		}
 	}

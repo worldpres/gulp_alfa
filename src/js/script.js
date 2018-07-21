@@ -1,5 +1,3 @@
-$('html').addClass('js');
-
 function scrollFunction() {
     var showButtonHeight = 160;
     if (document.body.scrollTop > showButtonHeight || document.documentElement.scrollTop > showButtonHeight) {
@@ -28,6 +26,26 @@ function textAnimation(element, text) {
     })
 }
 
+function aboutUsIconResize(){
+    var tab = [];
+    $('.icons .icon').each(function() {
+        $(this).height('auto');
+        tab.push($(this).height());
+    });
+    $('.icons .icon').each(function() {
+        $(this).height(Math.max(...tab));
+    });
+    console.log(tab);
+    console.log(Math.max(...tab));
+}
+
+
+
+
+
+
+$('html').addClass('js');
+
 $(window).on('load', function () {
     // setTimeout(function () {
     $("#preloader").fadeOut();
@@ -41,6 +59,11 @@ $(window).on('load', function () {
     setTimeout(function () {
         textAnimation('.header-text h2:eq(1)', 'miejscu');
     }, 3500);
+    aboutUsIconResize();
+});
+
+$(window).on('resize', function () {
+    aboutUsIconResize();
 });
 
 $(document).ready(function () {
