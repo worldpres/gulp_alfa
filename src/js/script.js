@@ -1,13 +1,4 @@
-$(document).ready(function () {
-    $('.button-collapse').sideNav();
-    $('.scrollspy').scrollSpy({
-        scrollOffset: 80,
-    });
-});
-
-window.onscroll = function () {
-    scrollFunction();
-}
+$('html').addClass('js');
 
 function scrollFunction() {
     var showButtonHeight = 160;
@@ -37,8 +28,28 @@ function textAnimation(element, text) {
     })
 }
 
-window.onload = function () {
-    setTimeout("textAnimation('.header-text h1', 'wyjątkowy dzień')", 500);
-    setTimeout("textAnimation('.header-text h2:eq(0)', 'w wyjątkowym')", 2000);
-    setTimeout("textAnimation('.header-text h2:eq(1)', 'miejscu')", 3500);
-}
+$(window).on('load', function () {
+    // setTimeout(function () {
+    $("#preloader").fadeOut();
+    // }, 3000);
+    setTimeout(function () {
+        textAnimation('.header-text h1', 'wyjątkowy dzień');
+    }, 500);
+    setTimeout(function () {
+        textAnimation('.header-text h2:eq(0)', 'w wyjątkowym');
+    }, 2000);
+    setTimeout(function () {
+        textAnimation('.header-text h2:eq(1)', 'miejscu');
+    }, 3500);
+});
+
+$(document).ready(function () {
+    $('.button-collapse').sideNav();
+    $('.scrollspy').scrollSpy({
+        scrollOffset: 80,
+    });
+});
+
+$(window).on('scroll', function () {
+    scrollFunction();
+});

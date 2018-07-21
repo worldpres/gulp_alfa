@@ -60,6 +60,68 @@ logo ALFA - TR Arabia
 
 body {
 	overflow-x: hidden;
+	.js {
+		#preloader,
+		.load {
+			display: block;
+		}
+	}
+	@keyframes spin {
+		0%,
+		100% {
+			transform: translate(0);
+		}
+		25% {
+			transform: translate(160%);
+		}
+		50% {
+			transform: translate(160%, 160%);
+		}
+		75% {
+			transform: translate(0, 160%);
+		}
+	}
+	#preloader {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 1000;
+		background: #fff;
+		.load {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100px;
+			height: 100px;
+			hr {
+				border: 0;
+				margin: 0;
+				width: 40%;
+				height: 40%;
+				position: absolute;
+				border-radius: 50%;
+				animation: spin 2s ease infinite;
+			}
+			:first-child {
+				background: $czarny;
+				animation-delay: -1.5s;
+			}
+			:nth-child(2) {
+				background: $zloty;
+				animation-delay: -1s;
+			}
+			:nth-child(3) {
+				background: $czarny;
+				animation-delay: -0.5s;
+			}
+			:last-child {
+				background: $zloty;
+			}
+		}
+	}
 	#toTop {
 		display: block;
 		position: fixed;
@@ -181,6 +243,7 @@ body {
 					}
 					&:hover {
 						a {
+							background-color: transparent;
 							&:before {
 								left: 0%;
 								width: 100%;
