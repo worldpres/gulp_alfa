@@ -1,18 +1,18 @@
 /* tmp */
 section:nth-child(1) {
-  background-color: #b1dc98; }
+  background-color: #415a9b; }
 
 section:nth-child(2) {
-  background-color: #85d55d; }
+  background-color: #2d289a; }
 
 section:nth-child(3) {
-  background-color: #dbbdcc; }
+  background-color: #e2c6dd; }
 
 section:nth-child(4) {
-  background-color: #bb3a69; }
+  background-color: #8986d5; }
 
 section:nth-child(5) {
-  background-color: #b2859b; }
+  background-color: #63b06c; }
 
 section {
   height: 50vh; }
