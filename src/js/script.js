@@ -35,8 +35,6 @@ function aboutUsIconResize(){
     $('.icons .icon').each(function() {
         $(this).height(Math.max(...tab));
     });
-    console.log(tab);
-    console.log(Math.max(...tab));
 }
 
 
