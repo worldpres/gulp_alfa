@@ -10,7 +10,7 @@
 // 	}
 // }
 // section {
-// 	min-height: 30vh;
+// 	min-height: 100vh;
 // }
 /* Normalize.css fix */
 
@@ -349,6 +349,7 @@ body {
 				background-repeat: no-repeat;
 				background-position: 50% 50%;
 				background-size: cover;
+				background-attachment: fixed;
 				color: #fff;
 				margin: 0px;
 				&:nth-child(1) {
@@ -367,13 +368,77 @@ body {
 				font-weight: 300;
 			}
 		}
-		.button{
+		.button {
 			display: inline-block;
 			background-color: $zloty;
 			color: $czarny;
 			padding: 10px 20px;
-			&:hover{
+			&:hover {
 				filter: contrast(120%);
+			}
+		}
+		#promocje {
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: cover;
+			background-image: url('../img/bg-promocje2.jpg');
+			background-attachment: fixed;
+			color: $czarny;
+			position: relative;
+			padding: 20px 0px;
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				z-index: 0;
+				background: rgba(#fff, 0.7);
+			}
+			.row {
+				position: relative;
+				z-index: 1;
+				margin: 0px;
+			}
+			h1 {
+				font-family: 'Scriptina';
+				font-size: 3em;
+				text-shadow: 0px 0px 1px #fff;
+				text-align: center;
+				padding-bottom: 20px;
+			}
+			ul:not(.collapsible) {
+				padding-bottom: 20px;
+				li {
+					list-style-type: circle;
+					list-style-position: inside;
+				}
+			}
+			.collapsible {
+				.collapsible-header {
+					background-color: rgba(#fff, 0.4);
+					border-bottom: 1px solid transparent;
+				}
+				.collapsible-body {
+					border-bottom: none;
+				}
+				&>li {
+					border-bottom: 1px solid rgba(#fff, 0.8);
+					box-shadow: unset;
+					&:last-child{
+						border: none;
+					}
+					&.active {
+						.collapsible-header {
+							background-color: rgba(#fff, 0.8);
+						}
+						.collapsible-body {
+							background-color: rgba(#fff, 0.6);
+						}
+					}
+				}
 			}
 		}
 	}
