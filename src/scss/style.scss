@@ -303,9 +303,17 @@ body {
 				text-align: center;
 				.icon {
 					margin: 20px 0px;
+					&:hover{
+						div:nth-child(1) {
+							img {
+								filter: contrast(120%);
+							}
+						}
+					}
 					div:nth-child(1) {
 						img {
-							height: 100px;
+							height: 80px;
+							transition: all 0.25s;
 						}
 					}
 					div:nth-child(2) {
