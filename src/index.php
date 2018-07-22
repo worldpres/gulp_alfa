@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/materialize-icon.css" media="screen,projection">
 	<link rel="stylesheet" href="css/materialize.css" media="screen,projection">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/simplelightbox.css">
 </head>
 
 <body>
@@ -283,10 +284,18 @@
 			<h1>Galeria</h1>
 			<div class="container">
 				<div class="row">
-					<div class="col s12 m6 l4">
-						<img src="img/galeria/1.jpg" class="materialboxed" alt="">
-						<img src="img/galeria/1.jpg" class="materialboxed" alt="">
-						<img src="img/galeria/1.jpg" class="materialboxed" alt="">
+					<div class="col s12">
+						<div class="gallery carousel carousel-slider center">
+							<div class="carousel-item">
+<?php
+//gallery
+for ($i = 1; $i <= 20; $i++) {
+	if($i%9 == 0) echo "</div><div class='carousel-item'>";
+	echo "<a href='img/galeria/$i.jpg' style='background-image:url(\"img/galeria/$i.jpg\")'></a>";
+}
+?>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -316,6 +325,7 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/materialize.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/simple-lightbox.js"></script>
 </body>
 
 </html>

@@ -26,13 +26,13 @@ function textAnimation(element, text) {
     })
 }
 
-function aboutUsIconResize(){
+function aboutUsIconResize() {
     var tab = [];
-    $('.icons .icon').each(function() {
+    $('.icons .icon').each(function () {
         $(this).height('auto');
         tab.push($(this).height());
     });
-    $('.icons .icon').each(function() {
+    $('.icons .icon').each(function () {
         $(this).height(Math.max(...tab));
     });
 }
@@ -69,6 +69,9 @@ $(document).ready(function () {
     $('.scrollspy').scrollSpy({
         scrollOffset: 80,
     });
+    var gallery = $('#galeria .gallery.carousel a').simpleLightbox();
+    $('#galeria .gallery.carousel').carousel({fullWidth: true});
+    $('#galeria .gallery.carousel').attr( "style", "height:500px");
 });
 
 $(window).on('scroll', function () {

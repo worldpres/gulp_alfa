@@ -54,14 +54,12 @@ gulp.task('sass', function(){
 });
 
 gulp.task('serve', ['sass'], function() { //zadnie serve które też uruchamia zadanie sass
-	browserSync({
+	/* browserSync({
 		server: cfg.src // folder zaczytywany przez browserSync do localhost:3000
-	});
-	/*
+	}); */
 	connectPHP.server({	base: cfg.src, port: 8010, keepalive: true },
 		function(){	browserSync({ proxy: '127.0.0.1:8010' }) }
     );
-	*/
 	gulp.watch([cfg.htmlin, cfg.jsin, cfg.phpin], ['reload']); //sledzenie zmian w plikach html/js/php, jesli zmiana to przeladuje strone
 	gulp.watch(cfg.scssin, ['sass']); //sledzenie zmian w plikach scss, jeśli zmiana to przekompiluje na css
 });

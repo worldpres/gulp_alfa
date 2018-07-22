@@ -451,6 +451,23 @@ body {
 				font-size: 3em;
 				text-shadow: 0px 0px 0px #000;
 			}
+			.gallery{
+				line-height: 0px;
+				text-align: center;
+				a{
+					display: inline-block;
+					width: 33.3%;
+					height: 250px;
+					margin: 0px;
+					padding: 0px;
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center center;
+					&:hover{
+						filter: sepia(120%);
+					}
+				}
+			}
 		}
 	}
 }
