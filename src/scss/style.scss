@@ -563,14 +563,32 @@ body {
 						}
 					}
 					.show-on-map {
-						// position: absolute;
-						// top: 20px;
-						// right: 20px;
 						cursor: pointer;
 						i{
 							display: inline-block;
 						}
 					}
+				}
+			}
+			.form{
+				margin-top: 40px;
+				input:not([type="submit"]), textarea{
+					display: block;
+					height: 30px;
+					width: 100%;
+					margin: 10px 0px;
+					border: 1px solid #bbb;
+					border-radius: 4px;
+					box-shadow: 1px 1px 3px #777;
+					padding: 10px;
+					color: $czarny;
+				}
+				textarea{
+					height: 130px;
+					resize: none;
+				}
+				input[type="submit"]{
+					border:none;
 				}
 			}
 		}

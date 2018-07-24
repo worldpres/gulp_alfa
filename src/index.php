@@ -336,6 +336,31 @@ for ($i = 1; $i <= $galleryLenght; $i++) {
 					</div>
 				</div>
 			</div>
+			<div class="container form">
+				<div class="row">
+					<div class="col s12 m6">
+						<div class="col s12">
+							<input type="text" placeholder="Imię i nazwisko" class="browser-default">
+						</div>
+						<div class="col s12">
+							<input type="text" placeholder="Adres email" class="browser-default">
+						</div>
+						<div class="col s12">
+							<input type="text" placeholder="Numer telefonu" class="browser-default">
+						</div>
+					</div>
+					<div class="col s12 m6 right">
+						<div class="col s12">
+							<textarea placeholder="Wiadomość..."></textarea>
+						</div>
+					</div>
+					<div class="col s12 right-align">
+						<div class="col s12">
+							<input type="submit" class="button" value="Wyślij">
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 	</main>
 	<footer class="page-footer cyan">
