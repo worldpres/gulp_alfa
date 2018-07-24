@@ -282,18 +282,29 @@
 		</section>
 		<section id="galeria" class="scrollspy">
 			<h1>Galeria</h1>
-			<div class="container">
-				<div class="row">
-					<div class="col s12">
-						<div class="gallery carousel carousel-slider center">
-							<div class="carousel-item">
-<?php
+			<div class="arrows">
+				<div class="container">
+					<div class="row">
+						<div class="col s12">
+							<div class="gallery carousel carousel-slider center">
+								<div class="arrow arrowLeft">
+									<i class="material-icons">keyboard_arrow_left</i>
+								</div>
+								<div class="arrow arrowRight">
+									<i class="material-icons">keyboard_arrow_right</i>
+								</div>
+								<div class="carousel-item">
+									<?php
 //gallery
-for ($i = 1; $i <= 20; $i++) {
-	if($i%9 == 0) echo "</div><div class='carousel-item'>";
-	echo "<a href='img/galeria/$i.jpg' style='background-image:url(\"img/galeria/$i.jpg\")'></a>";
+$galleryLenght = 12;
+for ($i = 1; $i <= $galleryLenght; $i++) {
+    echo "<a href='img/galeria/$i.jpg' style='background-image:url(\"img/galeria/$i.jpg\")'></a>";
+    if ($i % 6 == 0 && $i != $galleryLenght) {
+        echo "</div><div class='carousel-item'>";
+    }
 }
 ?>
+								</div>
 							</div>
 						</div>
 					</div>
