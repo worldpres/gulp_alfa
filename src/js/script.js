@@ -1,10 +1,10 @@
 function scrolledDown() {
     var showButtonHeight = 160;
     if (document.body.scrollTop > showButtonHeight || document.documentElement.scrollTop > showButtonHeight) {
-        $('#toTop').addClass('show');
+        $('#to-top').addClass('show');
         $('nav').addClass('small');
     } else {
-        $('#toTop').removeClass('show');
+        $('#to-top').removeClass('show');
         $('nav').removeClass('small');
     }
 }
@@ -85,10 +85,42 @@ $(document).ready(function () {
     });
     $('#galeria .gallery.carousel').attr("style", "height:500px");
     setTimeout(autoplay, 15000);
-    $('#galeria .arrow.arrowLeft').click(function () {
+    $('#galeria .arrow.arrow-left').click(function () {
         $('#galeria .carousel').carousel('prev');
     });
-    $('#galeria .arrow.arrowRight').click(function () {
+    $('#galeria .arrow.arrow-right').click(function () {
         $('#galeria .carousel').carousel('next');
     });
+});
+
+/* google maps */
+function gmap(lat, lng, z) {
+    lat = (typeof lat !== 'undefined') ? lat : 1;
+    lng = (typeof lng !== 'undefined') ? lng : 1;
+    z = (typeof z !== 'undefined') ? z : 9;
+    var mapProp = {
+        center: new google.maps.LatLng(lat, lng),
+        zoom: z,
+        disableDefaultUI: true,
+        //mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeId: 'roadmap',
+        styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#dadada"},{"visibility":"on"}]}]
+    };
+    var map = new google.maps.Map(document.getElementById("google-maps"), mapProp);
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(lat, lng),
+        icon: 'img/alfa-pin.png'
+    });
+    marker.setMap(map);
+}
+google.maps.event.addDomListener(window, 'load', gmap(49.671725, 20.686636, 11));
+$(".map-control>div").eq(0).find(".show-on-map").click(function () {
+    gmap(49.671725, 20.686636, 11);
+    $(".map-control>div").eq(1).removeClass("choosed");
+    $(".map-control>div").eq(0).addClass("choosed");
+});
+$(".map-control>div").eq(1).find(".show-on-map").click(function () {
+    gmap(49.672952, 20.686113, 11);
+    $(".map-control>div").eq(0).removeClass("choosed");
+    $(".map-control>div").eq(1).addClass("choosed");
 });

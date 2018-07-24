@@ -23,7 +23,7 @@
 		</div>
 	</div>
 
-	<a class="material-icons" href="#home" id="toTop" title="Na górę strony">expand_less</a>
+	<a class="material-icons" href="#home" id="to-top" title="Na górę strony">expand_less</a>
 
 	<header id="home" class="scrollspy">
 		<div class="navbar-fixed">
@@ -287,10 +287,10 @@
 					<div class="row">
 						<div class="col s12">
 							<div class="gallery carousel carousel-slider center">
-								<div class="arrow arrowLeft">
+								<div class="arrow arrow-left">
 									<i class="material-icons">keyboard_arrow_left</i>
 								</div>
-								<div class="arrow arrowRight">
+								<div class="arrow arrow-right">
 									<i class="material-icons">keyboard_arrow_right</i>
 								</div>
 								<div class="carousel-item">
@@ -311,7 +311,32 @@ for ($i = 1; $i <= $galleryLenght; $i++) {
 				</div>
 			</div>
 		</section>
-		<section id="kontakt" class="scrollspy"></section>
+		<section id="kontakt" class="scrollspy">
+			<h1>Kontakt</h1>
+			<div class="container">
+				<div class="row google">
+					<div class="col s12" id="google-maps"></div>
+				</div>
+				<div class="row map-control">
+					<div class="col s12 m6 choosed">
+						<p>Dom Weselny Alfa II</p>
+						<p>Wielogłowy 282</p>
+						<p>tel. <a href="tel:+48 18 548 94 99">+48 18 548 94 99</a></p>
+						<p>kom. <a href="tel:+48 508 254 382">+48 508 254 382</a></p>
+						<p>email: <a href="mailto:domweselnyalfa2@op.pl">domweselnyalfa2@op.pl</a></p>
+						<div class="col s12 right-align show-on-map">Pokaż na mapie <i class="material-icons">location_on</i></div>
+					</div>
+					<div class="col s12 m6">
+						<p>Dom Weselny Alfa I</p>
+						<p>Wielogłowy 174</p>
+						<p>tel. <a href="tel:+48 18 443 27 53">+48 18 443 27 53</a></p>
+						<p>kom. <a href="tel:+48 508 254 382">+48 508 254 382</a></p>
+						<p>email: <a href="mailto:domweselnyalfa1@op.pl">domweselnyalfa1@op.pl</a></p>
+						<div class="col s12 right-align show-on-map">Pokaż na mapie <i class="material-icons">location_on</i></div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 	<footer class="page-footer cyan">
 		<div class="container">
@@ -335,8 +360,9 @@ for ($i = 1; $i <= $galleryLenght; $i++) {
 	</footer>
 	<script src="js/jquery.js"></script>
 	<script src="js/materialize.js"></script>
-	<script src="js/script.js"></script>
 	<script src="js/simple-lightbox.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBAShMIns1q5Mic2jlY5UcWAhbdjuW5ujU"></script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>

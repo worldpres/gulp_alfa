@@ -113,7 +113,7 @@ body {
 			}
 		}
 	}
-	#toTop {
+	#to-top {
 		display: block;
 		position: fixed;
 		bottom: 30px;
@@ -454,7 +454,7 @@ body {
 				font-size: 3em;
 				text-shadow: 0px 0px 0px #000;
 			}
-			.arrows{
+			.arrows {
 				position: relative;
 				.arrow {
 					display: inline-block;
@@ -471,19 +471,19 @@ body {
 					background-color: #fff;
 					opacity: 0.7;
 					color: $czarny;
-					&.arrowLeft{
+					&.arrow-left {
 						left: 0px;
 						border-radius: 0px 4px 4px 0px;
 					}
-					&.arrowRight{
+					&.arrow-right {
 						right: 0px;
 						border-radius: 4px 0px 0px 4px;
 					}
-					&:hover{
+					&:hover {
 						opacity: 1;
 						color: $zloty;
 					}
-					i{
+					i {
 						display: inline-block;
 						width: 40px;
 						height: 40px;
@@ -521,6 +521,54 @@ body {
 						cursor: zoom-in;
 						&::before {
 							background: rgba(#fff, 0.4);
+						}
+					}
+				}
+			}
+		}
+		#kontakt {
+			padding: 50px 0px;
+			background: #fff;
+			h1 {
+				text-align: center;
+				font-family: 'Scriptina';
+				font-size: 3em;
+				text-shadow: 0px 0px 0px #000;
+			}
+			.row.google{
+				padding: 0px;
+				margin: 0px;
+				#google-maps {
+					height: 300px;
+				}
+			}
+			.map-control {
+				margin: 0px;
+				&>div {
+					position: relative;
+					background: $czarny;
+					color: $zloty;
+					padding: 30px;
+					p{
+						margin: 0px;
+					}
+					a{
+						color: $zloty;
+					}
+					&.choosed{
+						background: $zloty;
+						color: $czarny;
+						a{
+							color: $czarny;
+						}
+					}
+					.show-on-map {
+						// position: absolute;
+						// top: 20px;
+						// right: 20px;
+						cursor: pointer;
+						i{
+							display: inline-block;
 						}
 					}
 				}
