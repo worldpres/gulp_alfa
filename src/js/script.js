@@ -42,6 +42,18 @@ function autoplay() {
     setTimeout(autoplay, 15000);
 }
 
+function dpresScrollFire(elements, offset) {
+    position = $(this).scrollTop() + $(this).height() - offset;
+    $(elements).each(function () {
+        $(this).css('transition', 'all 0.7s');
+        if (Math.round($(this).position().top) < position) {
+            $(this).css("opacity", 1);
+        } else {
+            $(this).css("opacity", 0);
+        }
+    });
+}
+
 
 
 
@@ -62,14 +74,17 @@ $(window).on('load', function () {
     }, 3500);
     scrolledDown();
     aboutUsIconResize();
+    dpresScrollFire('section:not([id="parallax"]), .icon, #kontakt h1, #kontakt .container', 200);
 });
 
 $(window).on('resize', function () {
     aboutUsIconResize();
+    dpresScrollFire('section:not([id="parallax"]), .icon, #kontakt h1, #kontakt .container', 200);
 });
 
 $(window).on('scroll', function () {
     scrolledDown();
+    dpresScrollFire('section:not([id="parallax"]), .icon, #kontakt h1, #kontakt .container', 200);
 });
 
 $(document).ready(function () {
@@ -106,7 +121,59 @@ function gmap(lat, lng, z) {
         disableDefaultUI: true,
         //mapTypeId: google.maps.MapTypeId.ROADMAP,
         mapTypeId: 'roadmap',
-        styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#dadada"},{"visibility":"on"}]}]
+        styles: [{
+            "featureType": "administrative",
+            "elementType": "labels.text.fill",
+            "stylers": [{
+                "color": "#444444"
+            }]
+        }, {
+            "featureType": "landscape",
+            "elementType": "all",
+            "stylers": [{
+                "color": "#f2f2f2"
+            }]
+        }, {
+            "featureType": "poi",
+            "elementType": "all",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "road",
+            "elementType": "all",
+            "stylers": [{
+                "saturation": -100
+            }, {
+                "lightness": 45
+            }]
+        }, {
+            "featureType": "road.highway",
+            "elementType": "all",
+            "stylers": [{
+                "visibility": "simplified"
+            }]
+        }, {
+            "featureType": "road.arterial",
+            "elementType": "labels.icon",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "transit",
+            "elementType": "all",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [{
+                "color": "#dadada"
+            }, {
+                "visibility": "on"
+            }]
+        }]
     };
     var map = new google.maps.Map(document.getElementById("google-maps"), mapProp);
     var marker = new google.maps.Marker({
