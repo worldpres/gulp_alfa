@@ -363,23 +363,23 @@ for ($i = 1; $i <= $galleryLenght; $i++) {
 			</div>
 		</section>
 	</main>
-	<footer class="page-footer cyan">
+	<footer>
 		<div class="container">
 			<div class="row">
-				<div class="col s12 m8 l6">
-					<h5 class="white-text">First Footer Content</h5>
-					<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+				<div class="col s12 m6 copyright">
+					Copyright &copy; <?php echo date('Y'); ?> <span class="company-name">ALFA</span>
 				</div>
-				<div class="col s12 m4 l6">
-					<h5 class="white-text">Second Footer Content</h5>
-					<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+				<div class="col s12 m6 polecaja">
+					Polecają nas:
+					<div>
+						<a href="http://czekofon.pl" target="_blank">
+							<img src="img/logo-czekofon.png">
+						</a>
+						<a href="http://alfa-janik.pl" target="_blank">
+							<span class="company-name">ALFA</span> Sklepy
+						</a>
+					</div>
 				</div>
-			</div>
-		</div>
-		<div class="footer-copyright">
-			<div class="container">
-				© 2017 Copyright Text
-				<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
 			</div>
 		</div>
 	</footer>
