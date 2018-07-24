@@ -19,7 +19,7 @@ var cfg = {
 	src			 : 'src/',
 	cssin		 : 'src/css/**/*.css',
 	jsin		 : 'src/js/**/*.js',
-	imgin		 : 'src/img/**/*.{jpg,jpeg,png,gif}',
+	imgin		 : 'src/img/**/*.{jpg,jpeg,png,gif,svg}',
 	htmlin		 : 'src/*.html',
 	scssin		 : 'src/scss/**/*.scss',
 	cssout		 : 'dist/css/',
@@ -71,19 +71,19 @@ gulp.task('default', ['serve']); //ustawienie zadania defaultowego na serve, uru
 
 gulp.task('css', function(){	//zadanie gulpa do minifikacji css, uruchamiamy w terminalu: gulp css
 	return gulp.src(cfg.cssin)	//pobranie plików css
-		//.pipe(concat(cfg.cssoutname)) //konkatenacja css
-		//.pipe(cleanCSS())	//minifikacja
+		.pipe(concat(cfg.cssoutname)) //konkatenacja css
+		.pipe(cleanCSS())	//minifikacja
 		.pipe(gulp.dest(cfg.cssout)); //zapisujemy wynikowy css
 });
 
 gulp.task('js', function(){	//zadanie gulpa do minifikacji js, uruchamiamy w terminalu: gulp js
 	return gulp.src(cfg.jsin)	//pobranie plików js
 		.pipe(concat(cfg.jsoutname)) //konkatenacja js
-		.pipe(uglify({
-			mangle: {
-	            except: ['$routeProvider','$window','$scope','$html','$location','$timeout','$sce','$interval'] //wykluczenia dla angulara
-	        }
-		}))	//minifikacja
+		// .pipe(uglify({
+		// 	mangle: {
+	    //         except: ['$routeProvider','$window','$scope','$html','$location','$timeout','$sce','$interval'] //wykluczenia dla angulara
+	    //     }
+		// }))	//minifikacja
 		.pipe(gulp.dest(cfg.jsout)); //zapisujemy wynikowy js
 });
 
@@ -104,11 +104,11 @@ gulp.task('html', function(){	//optymalizacja html
 			'css': cfg.cssreplaceout,	//scieżka z poziomu dist
 			'js': cfg.jsreplaceout //scieżka z poziomu dist
 		}))
-		/*.pipe(htmlMin({
+		.pipe(htmlMin({
 			sortAttributes: true, //sortowanie atrybutów znaczników
 			sortClassName: true, //sortowanie klas w class=""
 			collapseWhitespace: true, //kasowanie białych znaków
-		})) */
+		}))
 		.pipe(gulp.dest(cfg.dist));
 });
 
