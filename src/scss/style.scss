@@ -278,7 +278,7 @@ body {
 				line-height: 1.2em;
 				padding: 0px;
 				margin: 0px;
-				text-shadow: 0px 0px 0px #222;
+				text-shadow: 0px 0px 1px $czarny;
 			}
 			h2:nth-of-type(2) {
 				font-family: 'Scriptina';
@@ -287,7 +287,7 @@ body {
 				line-height: 1.2em;
 				padding: 0px;
 				margin: 0px;
-				text-shadow: 0px 0px 0px #222;
+				text-shadow: 0px 0px 1px $czarny;
 			}
 		}
 	}
@@ -299,7 +299,7 @@ body {
 				text-align: center;
 				font-family: 'Scriptina';
 				font-size: 3em;
-				text-shadow: 0px 0px 0px #000;
+				text-shadow: 0px 0px 1px $czarny;
 			}
 			.icons {
 				text-align: center;
@@ -341,7 +341,7 @@ body {
 				text-align: center;
 				font-family: 'Scriptina';
 				font-size: 3em;
-				text-shadow: 0px 0px 0px #fff;
+				text-shadow: 0px 0px 1px #fff;
 			}
 			ul {
 				li {
@@ -409,7 +409,7 @@ body {
 			h1 {
 				font-family: 'Scriptina';
 				font-size: 3em;
-				text-shadow: 0px 0px 0px #000;
+				text-shadow: 0px 0px 1px $czarny;
 				text-align: center;
 				padding-bottom: 20px;
 			}
@@ -452,7 +452,7 @@ body {
 				text-align: center;
 				font-family: 'Scriptina';
 				font-size: 3em;
-				text-shadow: 0px 0px 0px #000;
+				text-shadow: 0px 0px 1px $czarny;
 			}
 			.arrows {
 				position: relative;
@@ -533,7 +533,7 @@ body {
 				text-align: center;
 				font-family: 'Scriptina';
 				font-size: 3em;
-				text-shadow: 0px 0px 0px #000;
+				text-shadow: 0px 0px 1px $czarny;
 			}
 			.row.google{
 				padding: 0px;
@@ -543,7 +543,7 @@ body {
 				}
 			}
 			.map-control {
-				margin: 0px;
+				margin: 0px 0px 100px 0px;
 				&>div {
 					position: relative;
 					background: $czarny;
@@ -577,9 +577,7 @@ body {
 					height: 30px;
 					width: 100%;
 					margin: 10px 0px;
-					border: 1px solid #bbb;
-					border-radius: 4px;
-					box-shadow: 1px 1px 3px #777;
+					border: 1px solid $zloty;
 					padding: 10px;
 					color: $czarny;
 				}
