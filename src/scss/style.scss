@@ -335,7 +335,7 @@ body {
 		#oferta {
 			.blackbox {
 				background: rgba(#000, 0.75);
-				padding: 20px 40px;
+				padding: 0px 0px 20px 0px;
 			}
 			h1 {
 				text-align: center;
@@ -345,11 +345,28 @@ body {
 			}
 			ul {
 				li {
-					list-style-type: circle;
-					list-style-position: inside;
+					// list-style-type: circle;
+					// list-style-position: inside;
+					margin-bottom: 10px;
+					padding-left: 20px;
+					position: relative;
+					&::before{
+						content: "";
+						display: block;
+						position: absolute;
+						background: #fff;
+						width: 6px;
+						height: 6px;
+						border-radius: 50%;
+						top: 6px;
+						left: 0px;
+					}
 				}
 			}
-			.row {
+			p{
+				line-height: 24px;
+			}
+			&>.row {
 				background-repeat: no-repeat;
 				background-position: 50% 50%;
 				background-size: cover;
@@ -609,6 +626,7 @@ body {
 			margin: 0px;
 		}
 		.copyright {
+			margin-bottom: 30px;
 			.company-name {
 				display: inline-block;
 				margin-left: 10px;
