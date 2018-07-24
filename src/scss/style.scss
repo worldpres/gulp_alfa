@@ -535,7 +535,7 @@ body {
 				font-size: 3em;
 				text-shadow: 0px 0px 1px $czarny;
 			}
-			.row.google{
+			.row.google {
 				padding: 0px;
 				margin: 0px;
 				#google-maps {
@@ -549,30 +549,31 @@ body {
 					background: $czarny;
 					color: $zloty;
 					padding: 30px;
-					p{
+					p {
 						margin: 0px;
 					}
-					a{
+					a {
 						color: $zloty;
 					}
-					&.choosed{
+					&.choosed {
 						background: $zloty;
 						color: $czarny;
-						a{
+						a {
 							color: $czarny;
 						}
 					}
 					.show-on-map {
 						cursor: pointer;
-						i{
+						i {
 							display: inline-block;
 						}
 					}
 				}
 			}
-			.form{
+			.form {
 				margin-top: 40px;
-				input:not([type="submit"]), textarea{
+				input:not([type="submit"]),
+				textarea {
 					display: block;
 					height: 30px;
 					width: 100%;
@@ -581,46 +582,49 @@ body {
 					padding: 10px;
 					color: $czarny;
 				}
-				textarea{
+				textarea {
 					height: 130px;
 					resize: none;
 				}
-				input[type="submit"]{
-					border:none;
+				input[type="submit"] {
+					border: none;
 				}
 			}
 		}
+		.parallax-container {
+			min-height: 400px;
+		}
 	}
-	footer{
+	footer {
 		width: 100%;
 		min-height: 200px;
 		background: $czarny;
 		color: $zloty;
 		padding: 30px 0px;
 		font-size: 13px;
-		a{
+		a {
 			color: $zloty;
 		}
-		.row{
+		.row {
 			margin: 0px;
 		}
-		.copyright{
-			.company-name{
+		.copyright {
+			.company-name {
 				display: inline-block;
 				margin-left: 10px;
 				font-family: 'Arabia';
 				font-size: 16px;
 			}
 		}
-		.polecaja{
+		.polecaja {
 			text-align: right;
-			.company-name{
+			.company-name {
 				display: inline-block;
 				margin-left: 10px;
 				font-family: 'Arabia';
 				font-size: 24px;
 			}
-			img{
+			img {
 				height: 60px;
 				margin-bottom: -10px;
 			}

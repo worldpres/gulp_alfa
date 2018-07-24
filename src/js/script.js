@@ -91,6 +91,8 @@ $(document).ready(function () {
     $('#galeria .arrow.arrow-right').click(function () {
         $('#galeria .carousel').carousel('next');
     });
+
+    $('.parallax').parallax();
 });
 
 /* google maps */
