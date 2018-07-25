@@ -45,7 +45,7 @@ function autoplay() {
 function dpresScrollFire(elements, offset) {
     position = $(this).scrollTop() + $(this).height() - offset;
     $(elements).each(function () {
-        $(this).css('transition', 'all 0.7s');
+        $(this).css('transition', 'all 0.5s linear');
         if (Math.round($(this).position().top) < position) {
             $(this).css("opacity", 1);
         } else {
@@ -92,7 +92,7 @@ $(document).ready(function () {
     $('.scrollspy').scrollSpy({
         scrollOffset: 80,
     });
-    var gallery = $('#galeria .gallery.carousel a').simpleLightbox();
+    $('#galeria .gallery.carousel a').simpleLightbox();
     $('#galeria .gallery.carousel').carousel({
         fullWidth: true,
         padding: 0,
@@ -108,6 +108,25 @@ $(document).ready(function () {
     });
 
     $('.parallax').parallax();
+
+
+    $('#oferta .row:nth-child(2) ul li').css('opacity',0);
+    var options = [{
+            selector: '#oferta .row:nth-child(2) ul:nth-of-type(1)',
+            offset: 200,
+            callback: function (el) {
+                Materialize.showStaggeredList($(el));
+            }
+        },
+        {
+            selector: '#oferta .row:nth-child(2) ul:nth-of-type(2)',
+            offset: 200,
+            callback: function (el) {
+                Materialize.showStaggeredList($(el));
+            }
+        }
+    ];
+    Materialize.scrollFire(options);
 });
 
 /* google maps */
