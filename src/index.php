@@ -285,12 +285,12 @@
 			</div>
 		</section>
 		<section id="galeria" class="scrollspy">
-			<h1>Galeria</h1>
+			<h1>Alfa |</h1>
 			<div class="arrows">
 				<div class="container">
 					<div class="row">
 						<div class="col s12">
-							<div class="gallery carousel carousel-slider center">
+							<div class="alfa1 gallery carousel carousel-slider center">
 								<div class="arrow arrow-left">
 									<i class="material-icons">keyboard_arrow_left</i>
 								</div>
@@ -302,8 +302,38 @@
 //gallery
 $galleryLenght = 12;
 for ($i = 1; $i <= $galleryLenght; $i++) {
-    echo "<a href='img/galeria/$i.jpg' style='background-image:url(\"img/galeria/$i.jpg\")'></a>";
-    if ($i % 6 == 0 && $i != $galleryLenght) {
+    echo "<a href='img/galeria1/$i.jpg' style='background-image:url(\"img/galeria1/$i.jpg\")'></a>";
+    if ($i % 3 == 0 && $i != $galleryLenght) {
+        echo "</div><div class='carousel-item'>";
+    }
+}
+?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<h1>Alfa ||</h1>
+			<div class="arrows">
+				<div class="container">
+					<div class="row">
+						<div class="col s12">
+							<div class="alfa2 gallery carousel carousel-slider center">
+								<div class="arrow arrow-left">
+									<i class="material-icons">keyboard_arrow_left</i>
+								</div>
+								<div class="arrow arrow-right">
+									<i class="material-icons">keyboard_arrow_right</i>
+								</div>
+								<div class="carousel-item">
+									<?php
+//gallery2
+$galleryLenght = 6;
+for ($i = 1; $i <= $galleryLenght; $i++) {
+    echo "<a href='img/galeria2/$i.jpg' style='background-image:url(\"img/galeria2/$i.jpg\")'></a>";
+    if ($i % 3 == 0 && $i != $galleryLenght) {
         echo "</div><div class='carousel-item'>";
     }
 }

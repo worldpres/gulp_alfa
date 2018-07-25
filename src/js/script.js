@@ -93,18 +93,25 @@ $(document).ready(function () {
         scrollOffset: 80,
     });
     $('#galeria .gallery.carousel a').simpleLightbox();
+
     $('#galeria .gallery.carousel').carousel({
         fullWidth: true,
         padding: 0,
         duration: 50
     });
-    $('#galeria .gallery.carousel').attr("style", "height:500px");
+    $('#galeria .gallery.carousel').attr("style", "height:250px");
     setTimeout(autoplay, 15000);
-    $('#galeria .arrow.arrow-left').click(function () {
-        $('#galeria .carousel').carousel('prev');
+    $('#galeria .alfa1 .arrow.arrow-left').click(function () {
+        $('#galeria .alfa1.carousel').carousel('prev');
     });
-    $('#galeria .arrow.arrow-right').click(function () {
-        $('#galeria .carousel').carousel('next');
+    $('#galeria .alfa1 .arrow.arrow-right').click(function () {
+        $('#galeria .alfa1.carousel').carousel('next');
+    });
+    $('#galeria .alfa2 .arrow.arrow-left').click(function () {
+        $('#galeria .alfa2.carousel').carousel('prev');
+    });
+    $('#galeria .alfa2 .arrow.arrow-right').click(function () {
+        $('#galeria .alfa2.carousel').carousel('next');
     });
 
     $('.parallax').parallax();

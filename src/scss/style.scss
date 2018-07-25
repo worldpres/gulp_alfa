@@ -513,6 +513,9 @@ body {
 			.gallery {
 				line-height: 0px;
 				text-align: center;
+				&.alfa1{
+					margin-bottom: 60px;
+				}
 				a {
 					display: inline-block;
 					width: 33.3%;
