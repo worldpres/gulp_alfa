@@ -594,6 +594,10 @@ body {
 				margin: 0px;
 				#google-maps {
 					height: 300px;
+					a{
+						color: $czarny;
+						text-decoration: underline;
+					}
 				}
 			}
 			.map-control {

@@ -135,7 +135,7 @@ $(document).ready(function () {
 });
 
 /* google maps */
-function gmap(lat, lng, z) {
+function gmap(lat, lng, z, pin, text) {
     lat = (typeof lat !== 'undefined') ? lat : 1;
     lng = (typeof lng !== 'undefined') ? lng : 1;
     z = (typeof z !== 'undefined') ? z : 9;
@@ -202,18 +202,24 @@ function gmap(lat, lng, z) {
     var map = new google.maps.Map(document.getElementById("google-maps"), mapProp);
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(lat, lng),
-        icon: 'img/alfa-pin.png'
+        icon: pin
     });
     marker.setMap(map);
+    google.maps.event.addListener(marker,'click',function() {
+        var infowindow = new google.maps.InfoWindow({
+            content: text
+        });
+        infowindow.open(map,marker);
+    });
 }
-google.maps.event.addDomListener(window, 'load', gmap(49.671725, 20.686636, 11));
+google.maps.event.addDomListener(window, 'load', gmap(49.671725, 20.686636, 11, 'img/alfa2-pin.png', 'Dom weselny ALFA II<br><a href="https://www.google.com/maps/place/Dom+Weselny+Alfa+II/@49.6716639,20.6844392,17z/data=!3m1!4b1!4m5!3m4!1s0x473df0443203109f:0xc19eb99c6b6ea25a!8m2!3d49.6716639!4d20.6866279" target="_blank">Zobacz na dużej mapie</a>'));
 $(".map-control>div").eq(0).find(".show-on-map").click(function () {
-    gmap(49.671725, 20.686636, 11);
+    gmap(49.671725, 20.686636, 11, 'img/alfa2-pin.png', 'Dom weselny ALFA II<br><a href="https://www.google.com/maps/place/Dom+Weselny+Alfa+II/@49.6716639,20.6844392,17z/data=!3m1!4b1!4m5!3m4!1s0x473df0443203109f:0xc19eb99c6b6ea25a!8m2!3d49.6716639!4d20.6866279" target="_blank">Zobacz na dużej mapie</a>');
     $(".map-control>div").eq(1).removeClass("choosed");
     $(".map-control>div").eq(0).addClass("choosed");
 });
 $(".map-control>div").eq(1).find(".show-on-map").click(function () {
-    gmap(49.672952, 20.686113, 11);
+    gmap(49.672952, 20.686113, 11, 'img/alfa1-pin.png', 'Dom weselny ALFA I<br><a href="https://www.google.com/maps/place/Dom+Weselny+Alfa+I/@49.6727644,20.683903,17z/data=!3m1!4b1!4m5!3m4!1s0x46fe0fd9c8db6331:0xd0b3b14bbc677491!8m2!3d49.6727644!4d20.6860917" target="_blank">Zobacz na dużej mapie</a>');
     $(".map-control>div").eq(0).removeClass("choosed");
     $(".map-control>div").eq(1).addClass("choosed");
 });
