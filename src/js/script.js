@@ -114,8 +114,6 @@ $(document).ready(function () {
         $('#galeria .alfa2.carousel').carousel('next');
     });
 
-    $('.parallax').parallax();
-
 
     $('#oferta .row:nth-child(2) ul li').css('opacity',0);
     var options = [{

@@ -45,6 +45,9 @@
 						</div>
 						<ul class="right hide-on-med-and-down">
 							<li>
+								<a href="#sylwester">sylwester</a>
+							</li>
+							<li>
 								<a href="#onas">o nas</a>
 							</li>
 							<li>
@@ -62,7 +65,7 @@
 						</ul>
 						<ul class="side-nav" id="mobile-menu">
 							<li>
-								<a href="#onas">o nas</a>
+								<a href="#sylwester">sylwester</a>
 							</li>
 							<li>
 								<a href="#">oferta</a>
@@ -90,6 +93,17 @@
 		</div>
 	</header>
 	<main>
+		<section id="sylwester" class="scrollspy">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h1>Sylwester</h1>
+						<p>Incididunt aliquip velit magna incididunt nostrud ad nulla ex non ex in. Veniam fugiat et labore velit velit esse anim. Reprehenderit duis excepteur ad amet incididunt deserunt veniam anim aute. Duis veniam quis nisi quis fugiat voluptate est adipisicing consectetur esse pariatur ipsum ullamco non. Qui in non incididunt elit aute laboris aute non excepteur proident duis sunt. Nisi in exercitation anim excepteur incididunt consectetur quis cupidatat minim.</p>
+						<p>Aliqua anim non Lorem sit irure exercitation aliquip laborum cupidatat commodo consectetur sit. Elit non mollit et veniam eu laboris occaecat veniam mollit eiusmod ex velit. Ex consectetur amet cillum cillum occaecat officia. Magna sit ullamco commodo ipsum sit velit dolore elit do ut aliquip. Nostrud irure esse nisi in aliquip non cupidatat duis fugiat.</p>		
+					</div>
+				</div>
+			</div>
+		</section>
 		<section id="onas" class="scrollspy container">
 			<h1>Co nas różni od konkurencji?</h1>
 			<div class="row icons">
@@ -413,13 +427,7 @@ for ($i = 1; $i <= $galleryLenght; $i++) {
 				</div>
 			</div>
 		</section>
-		<section id="parallax">
-			<div class="parallax-container">
-				<div class="parallax">
-					<img src="img/bg-promocje3.jpg">
-				</div>
-			</div>
-		</section>
+		<section id="parallax"></section>
 	</main>
 	<footer>
 		<div class="container">

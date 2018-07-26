@@ -292,6 +292,40 @@ body {
 		}
 	}
 	main {
+		#sylwester {
+			padding: 50px 0px;
+			width: 100%;
+			min-height: 400px;
+			background-image: url('../img/bg-promocje1.jpg');
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			position: relative;
+			color: #fff;
+			&::before{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				background: rgba(#000, 0.75);
+				z-index: 0;
+			}
+			h1 {
+				text-align: center;
+				font-family: 'Scriptina';
+				font-size: 3em;
+				text-shadow: 0px 0px 0px $czarny;
+				padding-bottom: 20px;
+			}
+			.container{
+				position: relative;
+				z-index: 1;
+			}
+		}
 		#onas {
 			padding: 50px 0px;
 			background: #fff;
@@ -611,8 +645,26 @@ body {
 				}
 			}
 		}
-		.parallax-container {
+		#parallax {
 			height: 400px;
+			width: 100%;
+			background-image: url('../img/bg-promocje3.jpg');
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			position: relative;
+			&::before{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				background: rgba(#fff, 0.5);
+				z-index: 1;
+			}
 		}
 	}
 	footer {
